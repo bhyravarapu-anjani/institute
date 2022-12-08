@@ -1,0 +1,25 @@
+.parent {
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.child {
+    height:30vh;
+    width:30vw;
+    background-color: gray;
+    text-align:center;
+}
+input {
+    margin-bottom:10px;
+    
+    border-radius:10px;
+}
+button {
+    height:30px;
+    width:100px;
+    background-color:dodgerblue;
+    border-radius:20px;
+    margin-left:5px;
+}
