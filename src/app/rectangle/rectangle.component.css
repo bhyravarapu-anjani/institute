@@ -1,0 +1,30 @@
+.rectangle {
+    background-color: gray;
+    height:40vh;
+    width:30vw;
+   margin:auto;
+   text-align: center;
+   border-radius:20px;
+}
+input {
+    
+    border-radius:10px;
+    margin-bottom:10px;
+    margin-top:10px;
+    height:20px;
+    
+    
+}
+button{
+    margin-left:10px;
+    height: 30px;
+    width:120px;
+    background-color:powderblue;
+    border-radius:10px;
+}
+h4 {
+    font-size:25px;
+}
+input:hover {
+    background-color: yellow;
+}
