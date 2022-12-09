@@ -5,16 +5,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { FormsModule } from '@angular/forms';
+import { RectangleComponent } from './rectangle/rectangle.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculatorComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    HomeComponent,
+    DashboardComponent,
+    LoginComponent,
+    DataBindingComponent,
+    RectangleComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
