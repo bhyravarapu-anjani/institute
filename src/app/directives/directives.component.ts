@@ -10,10 +10,11 @@ export class DirectivesComponent {
   public states:string[]=["Andhra","telangana","madyapradesh"]
   public users:any=
   [
-    {name:"anjani",age:25,package:12},
-    {name:"Shareef",age:30,package:14},
+    {name:"anjani",age:19,package:9},
+    {name:"Shareef",age:40,package:14},
     {name:"sai",age:24,package:13}
   ];
   public time:number=14;
+  public today:any=new Date();
 
 }
