@@ -1,0 +1,15 @@
+
+<header class="d-flex flex-column justify-content-center" >
+    <div style="background-color: gray;height:30vh;width:30vw;margin:auto;" class="text-center">
+    <h1>Google pay</h1>
+    <label >Amount</label>
+    <input type="number" [(ngModel)]="amount"><br>
+    <button (click)="deposit()" class="btn btn-danger">Deposit</button>
+    <button  (click)="withdraw()"class="ml-2 btn btn-primary">Withdraw</button>
+    
+    <button (click)="showbalance()"class="ml-2 btn btn-success">Show Balance</button>
+    
+    </div>
+
+  </header>
+

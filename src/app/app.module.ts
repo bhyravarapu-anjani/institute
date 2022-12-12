@@ -12,6 +12,9 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { SqaureComponent } from './sqaure/sqaure.component';
+import { ShoppingComponent } from './shopping/shopping.component';
+import { GpayComponent } from './gpay/gpay.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { DirectivesComponent } from './directives/directives.component';
     LoginComponent,
     DataBindingComponent,
     RectangleComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    SqaureComponent,
+    ShoppingComponent,
+    GpayComponent
   ],
   imports: [
     BrowserModule,

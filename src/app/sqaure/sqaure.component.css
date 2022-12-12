@@ -1,0 +1,15 @@
+.parent {
+    height:100vh;
+
+    background-color:powderblue;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.child {
+    height:30vh;
+    width:30vw;
+    background-color:gray;
+    text-align:center;
+
+}
