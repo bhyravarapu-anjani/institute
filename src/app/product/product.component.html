@@ -1,0 +1,24 @@
+<header>
+    <h1>ProductList</h1>
+    <table class="table table-design">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of lists">
+            <td>{{product.name|uppercase}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+            <td [ngStyle]="{'background-color':product.rating<3?'red':'green'}">{{product.rating}}</td>
+            
+            
+          </tr>
+          <button (click)="sort()">sort</button>
+        </tbody>
+      </table>
+</header>

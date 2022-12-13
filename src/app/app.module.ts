@@ -15,6 +15,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { SqaureComponent } from './sqaure/sqaure.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { GpayComponent } from './gpay/gpay.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { GpayComponent } from './gpay/gpay.component';
     DirectivesComponent,
     SqaureComponent,
     ShoppingComponent,
-    GpayComponent
+    GpayComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

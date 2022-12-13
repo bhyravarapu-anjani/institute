@@ -8,6 +8,7 @@ import { GpayComponent } from './gpay/gpay.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProductComponent } from './product/product.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { SqaureComponent } from './sqaure/sqaure.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
     {path:"rectangle",component:RectangleComponent},
     {path:"directives",component:DirectivesComponent},
     {path:"gpay",component:GpayComponent},
+    {path:"product",component:ProductComponent},
     {path:"square",component:SqaureComponent}
   ]},
   {path:"login",component:LoginComponent},
