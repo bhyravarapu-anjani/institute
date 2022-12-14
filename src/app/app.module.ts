@@ -16,6 +16,8 @@ import { SqaureComponent } from './sqaure/sqaure.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { GpayComponent } from './gpay/gpay.component';
 import { ProductComponent } from './product/product.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,14 @@ import { ProductComponent } from './product/product.component';
     SqaureComponent,
     ShoppingComponent,
     GpayComponent,
-    ProductComponent
+    ProductComponent,
+    VehicleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

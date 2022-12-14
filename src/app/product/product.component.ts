@@ -15,7 +15,7 @@ export class ProductComponent {
     
   }
   sort(){
-    this.lists=this.lists.sort((a:any,b:any)=>a.name-b.name);
+    this.lists=this.lists.sort((a:any,b:any)=>a.name.localCompare(b.name));
     this.lists=this.lists.sort((a:any,b:any)=>a.price-b.price);
   }
 

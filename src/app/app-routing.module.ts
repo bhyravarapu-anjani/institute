@@ -12,10 +12,12 @@ import { ProductComponent } from './product/product.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { SqaureComponent } from './sqaure/sqaure.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
   {path:"dashboard",component:DashboardComponent, children:[
     {path:"calculator",component:CalculatorComponent},
+    {path:"vehicle",component:VehicleComponent},
     {path:"home",component:HomeComponent},
     {path:"data-binding",component:DataBindingComponent},
     {path:"rectangle",component:RectangleComponent},
