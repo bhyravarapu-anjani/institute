@@ -5,10 +5,10 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class FlipkartService {
+export class MailService {
 
   constructor(private _httpClient:HttpClient) { }
   getData():Observable<any>{
-    return this._httpClient.get("https://fakestoreapi.com/products?limit='4'&page='2'")
+    return this._httpClient.get("https://jsonplaceholder.typicode.com/todos");
   }
 }
