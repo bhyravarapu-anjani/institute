@@ -1,0 +1,17 @@
+<h1>Flipkart Products</h1>
+<div *ngFor="let product of products" class="parent" style="display:inline-flex">
+  <div class="d-flex flex-row main-container ml-3"> 
+    <div class="image-container mr-2">
+        <p><img src="{{product.image}}" height="100" width="100" class="mt-5 ml-2 "/></p>
+      </div>
+     <div class="details-container ml-5 " style="overflow:auto;">  
+        <p>{{product.id}}</p>
+        <p>{{product.title}}</p>
+        <p>{{product.price}}</p>
+        
+        <P>{{product.description}}</P>
+        <p>{{product.category}}</p>
+      </div>
+        
+   </div>
+   </div>     

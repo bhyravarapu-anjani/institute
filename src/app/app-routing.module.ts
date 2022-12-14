@@ -4,6 +4,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
 import { GpayComponent } from './gpay/gpay.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:"dashboard",component:DashboardComponent, children:[
     {path:"calculator",component:CalculatorComponent},
     {path:"vehicle",component:VehicleComponent},
+    {path:"flipkart",component:FlipkartComponent},
     {path:"home",component:HomeComponent},
     {path:"sbibank",component:SbibankComponent},
     {path:"data-binding",component:DataBindingComponent},
