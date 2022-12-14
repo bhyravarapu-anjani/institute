@@ -1,0 +1,27 @@
+<h1>Banks Data</h1>
+<table border='2'>
+    <thead>
+        <th>createdAt</th>
+        <th>account_name</th>
+        <th>available_balance</th>
+        <th>currency</th>
+        <th>user_image</th>
+        <th>account_number</th>
+        <th>id</th>
+        
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let information of informations">
+        <td>{{information.createdAt}}</td>
+        <td>{{information.account_name}}</td>
+        <td>{{information.available_balance}}</td>
+        <td>{{information.currency}}</td>
+        <td><img src="{{information.user_image}}" height="50" width="50"/></td>
+        <td>{{information.account_number}}</td>
+        <td>{{information.id}}</td>
+        
+        
+        </tr>
+    </tbody>
+</table>
