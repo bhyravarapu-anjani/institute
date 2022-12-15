@@ -11,4 +11,25 @@ export class VehicleService {
   getVehicles ():Observable<any>{
     return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction");
   }
+  getVehicle(id:any):Observable<any>{
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id);
+
+  }
+  getFilteredVehicles(term:any):Observable<any>{
+    return this._httpClient.get(
+      "https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term
+    )
+  }
+  getSortedList(column:string,order:string){
+    return this._httpClient.get(
+      "https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?sortBy="+column+"&order="+order
+    );
+
+  }
+  getPagination(page:number):Observable<any>{
+    return this._httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?limit=10"+"&page="+page);
+
+  }
+  
 }
+

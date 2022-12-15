@@ -8,6 +8,9 @@ import { VehicleService } from '../vehicle.service';
 })
 export class VehicleComponent {
   public vehicles:any=[];
+  public term:string="";
+  public id:number=0
+
   constructor(private _vehicleService:VehicleService){
     this._vehicleService.getVehicles().subscribe(
       (data:any)=>{
@@ -19,5 +22,41 @@ export class VehicleComponent {
 
     )
   }
+  
+  filter(){
+    this._vehicleService.getFilteredVehicles(this.term).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+      },
+      (err:any)=>{
+        alert("invalid data")
+      }
+    )
+  }
+  public column:string="";
+  public order:string="";
+  sort(){
+    this._vehicleService.getSortedList(this.column,this.order).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+    },
+    (err:any)=>{
+      alert("invalid data");
+    }
+
+
+    )
+  }
+  page(page:number){
+    this._vehicleService.getPagination(page).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+      },
+      (err:any)=>{
+        alert("invalid data")
+      }
+    )
+  }
+
 
 }

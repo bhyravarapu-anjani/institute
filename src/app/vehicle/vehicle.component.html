@@ -1,4 +1,22 @@
 <h1>Table Data</h1>
+<input type="text" [(ngModel)]="term">
+<button (click)="filter()">filter</button>
+<select [(ngModel)]="column">
+  <option value="color">color</option>
+  <option value="model">model</option>
+  <option value="type">type</option>
+</select>
+<select [(ngModel)]="order">
+  <option value="asc">Ascending</option>
+  <option value="desc">Descending</option>
+  
+</select>
+<button (click)="sort()">sort</button>
+<ul class="pagination">
+  <li (click)="page(1)" class="page-item"><a class="page-link">1</a></li>
+  <li  (click)="page(2)" class="page-item"><a class="page-link">2</a></li>
+  <li  (click)="page(3)" class="page-item"><a class="page-link">3</a></li>
+  </ul>
 <table class="table table-bordered">
     <thead>
       <tr>
@@ -23,7 +41,7 @@
         <td><img src="{{vehicle.image}}" height="50" width="50"/></td>
         <td>{{vehicle.id}}</td>
       </tr>
-      <tr>
+      <!-- <tr>
         <td>Mary</td>
         <td>Moe</td>
         <td>mary@example.com</td>
@@ -32,6 +50,8 @@
         <td>July</td>
         <td>Dooley</td>
         <td>july@example.com</td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>
+  
+  
