@@ -2,6 +2,7 @@ import { Component, Directive, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
     {path:"gpay",component:GpayComponent},
     {path:"product",component:ProductComponent},
     {path:"mail",component:MailComponent},
+    {path:"create-vehicle",component:CreateVehicleComponent},
     {path:"square",component:SqaureComponent}
   ]},
   {path:"login",component:LoginComponent},

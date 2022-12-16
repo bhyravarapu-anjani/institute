@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { SqaureComponent } from './sqaure/sqaure.component';
@@ -22,6 +22,7 @@ import { SbibankComponent } from './sbibank/sbibank.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { BoredomComponent } from './boredom/boredom.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 @NgModule({
   declarations: [
@@ -42,13 +43,15 @@ import { BoredomComponent } from './boredom/boredom.component';
     SbibankComponent,
     FlipkartComponent,
     MailComponent,
-    BoredomComponent
+    BoredomComponent,
+    CreateVehicleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

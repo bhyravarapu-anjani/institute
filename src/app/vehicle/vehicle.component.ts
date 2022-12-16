@@ -57,6 +57,19 @@ export class VehicleComponent {
       }
     )
   }
+  delete(id:string){
+    this._vehicleService.deleteVehicle(id).subscribe(
+      (data:any)=>{
+       alert("delete successful");
+       location.reload();
+      },
+      (err:any)=>{
+        alert("invalid data");
+        
+      }
+      
+    )
+  }
 
 
 }
