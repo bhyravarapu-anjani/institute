@@ -1,12 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BankService {
+  constructor(private _httpClient:HttpClient){}
   public balance:number=1000;
 
-  constructor() { }
+  
   withdraw(amount:number){
     this.balance=this.balance-amount
   }
@@ -15,5 +18,8 @@ export class BankService {
   }
   showbalance(){
     return this.balance;
+  }
+  createBankData(data:any):Observable<any>{
+    return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",data);
   }
 }

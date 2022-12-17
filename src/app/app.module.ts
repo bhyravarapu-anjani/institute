@@ -23,6 +23,7 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateBankDataComponent } from './create-bank-data/create-bank-data.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
     FlipkartComponent,
     MailComponent,
     BoredomComponent,
-    CreateVehicleComponent
+    CreateVehicleComponent,
+    CreateBankDataComponent
   ],
   imports: [
     BrowserModule,
