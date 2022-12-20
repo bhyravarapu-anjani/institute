@@ -1,0 +1,71 @@
+<header class="text-left  bg-info">
+<form [formGroup]="studentForm" class="ml-2">
+    <label>name</label>
+    <input type="text" formControlName="name">
+    <br>
+    <label>email</label>
+    <input type="text" formControlName="email">
+    <br>
+    <label>phone</label>
+    <input type="number" formControlName="phone">
+    <br>
+    <div formGroupName="address" class="ml-1">
+        <label>city</label>
+        <input type="text" formControlName="city">
+        <br>
+        <label>state</label>
+        <input type="text" formControlName="state">
+        <br>
+
+        <label>pin</label>
+        <input type="text" formControlName="pin">
+        <br>
+
+
+    </div>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls; let i=index">
+            <h2>enter card details {{i+1}}</h2>
+            <div formGroupName="{{i}}">
+                <label>number</label>
+                <input type="number" formControlName="number">
+                <br>
+                <label>expiry</label>
+                <input type="month" formControlName="expiry">
+                <br>
+                <label>cvv</label>
+                <input type="number" formControlName="cvv">
+                <br>
+                <button  class="btn btn-danger" (click)="delete(i)">Delete</button>
+
+            </div>
+        </div>
+
+    </div>
+    <button  class="btn btn-success ml-2" (click)="add()">add card</button>
+    <br>
+
+    <label>type</label>
+    <input type="radio" name="type" formControlName="type" value="dayScholar"> 
+    <label>day scholar</label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+    <label>Residential</label>
+    <br>
+    <div *ngIf="studentForm.get('type')?.value=='dayScholar'">
+        <label>BusFees</label>
+        <input type="number">
+        <br>
+    </div>
+
+    <div *ngIf="studentForm.get('type')?.value=='residential'">
+        <label>Hostelfees</label>
+        <input type="number">
+        <br>
+    </div>
+    
+
+    
+    <button  class="btn btn-primary"(click)="submit()">submit</button>
+
+</form>
+</header>

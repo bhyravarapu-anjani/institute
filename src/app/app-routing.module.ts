@@ -1,8 +1,10 @@
 import { Component, Directive, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthenticationsGuardsGuard } from './authentications-guards.guard';
 import { BoredomComponent } from './boredom/boredom.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CreateBankDataComponent } from './create-bank-data/create-bank-data.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -21,12 +23,13 @@ import { SqaureComponent } from './sqaure/sqaure.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
-  {path:"dashboard",component:DashboardComponent, children:[
+  {path:"dashboard",component:DashboardComponent, canActivate:[AuthenticationsGuardsGuard], children:[
     {path:"calculator",component:CalculatorComponent},
     {path:"vehicle",component:VehicleComponent},
     {path:"flipkart",component:FlipkartComponent},
     {path:"home",component:HomeComponent},
     {path:"sbibank",component:SbibankComponent},
+    {path:"create-student",component:CreateStudentComponent},
     {path:"boredom",component:BoredomComponent},
     {path:"create-bank-data",component:CreateBankDataComponent},
     {path:"data-binding",component:DataBindingComponent},
