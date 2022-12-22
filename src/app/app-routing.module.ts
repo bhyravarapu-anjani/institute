@@ -9,11 +9,13 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeedataComponent } from './employeedata/employeedata.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { GpayComponent } from './gpay/gpay.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MailComponent } from './mail/mail.component';
+import { NotifyGuard } from './notify.guard';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductComponent } from './product/product.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
@@ -29,7 +31,8 @@ const routes: Routes = [
     {path:"flipkart",component:FlipkartComponent},
     {path:"home",component:HomeComponent},
     {path:"sbibank",component:SbibankComponent},
-    {path:"create-student",component:CreateStudentComponent},
+    {path:"create-student",component:CreateStudentComponent,canDeactivate:[NotifyGuard]},
+    {path:"employeedata",component:EmployeedataComponent},
     {path:"boredom",component:BoredomComponent},
     {path:"create-bank-data",component:CreateBankDataComponent},
     {path:"data-binding",component:DataBindingComponent},
@@ -38,7 +41,7 @@ const routes: Routes = [
     {path:"gpay",component:GpayComponent},
     {path:"product",component:ProductComponent},
     {path:"mail",component:MailComponent},
-    {path:"create-vehicle",component:CreateVehicleComponent},
+    {path:"create-vehicle",component:CreateVehicleComponent,canDeactivate:[NotifyGuard]},
     {path:"square",component:SqaureComponent}
   ]},
   {path:"login",component:LoginComponent},

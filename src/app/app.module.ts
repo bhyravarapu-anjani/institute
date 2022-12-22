@@ -25,6 +25,8 @@ import { BoredomComponent } from './boredom/boredom.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateBankDataComponent } from './create-bank-data/create-bank-data.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { EmployeedataComponent } from './employeedata/employeedata.component';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { CreateStudentComponent } from './create-student/create-student.componen
     BoredomComponent,
     CreateVehicleComponent,
     CreateBankDataComponent,
-    CreateStudentComponent
+    CreateStudentComponent,
+    EmployeedataComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,

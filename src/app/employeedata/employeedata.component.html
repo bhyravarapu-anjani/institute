@@ -1,0 +1,89 @@
+<form [formGroup]="employeeForm">
+    <label>Name</label>
+    <input type="text" formControlName="Name">
+    <br>
+
+    <label>Mobile</label>
+    <input type="number" formControlName="Mobile">
+    <br>
+
+    <label>Email</label>
+    <input type="text" formControlName="Email">
+    <br>
+
+    <label>DateOfBirth</label>
+    <input type="month" formControlName="DateOfBirth">
+    <br>
+    <div formGroupName="address">
+        <label>addressLine</label>
+        <input type="text" formControlName="addressLine">
+        <br>
+
+        <label>city</label>
+        <input type="text" formControlName="city">
+        <br>
+
+        <label>state</label>
+        <input type="text" formControlName="state">
+        <br>
+
+        <label>pincode</label>
+        <input type="text" formControlName="pincode">
+        <br>
+        <div formGroupName="location">
+            <label>nearBy</label>
+            <input type="text" formControlName="nearBy">
+            <br>
+
+            <label>landMark</label>
+            <input type="text" formControlName="landMark">
+
+        </div>
+
+    </div>
+    <div formArrayName="educations">
+        <div *ngFor="let education of educationFormArray.controls; let i=index">
+            <h2>Education Details {{i+1}}</h2>
+            <div formGroupName="{{i}}">
+                <label>education</label>
+                <input type="text" formControlName="qualification">
+                <br>
+                <button (click)="delete(i)" class="btn btn-danger">Delete</button>
+
+            </div> 
+        </div>
+    </div>
+    <button (click)="add()">ADD</button>
+    <br>
+    <label>type</label>
+    <input type="radio" name="type" formControlName="type" value="FrontendEngineer">
+    <label>FrontendEngineer</label>
+    <input type="radio" name="type" formControlName="type" value="BackendEngineer">
+    <label>BackendEngineer</label>
+    <br>
+    <div *ngIf="employeeForm.get('type')?.value=='FrontendEngineer'">
+        <label>HTML</label>
+        <input type="Text">
+        <br>
+        <label>CSS</label>
+        <input type="Text">
+        <br>
+        <label>JavaScript</label>
+        <input type="Text">
+        <br>
+
+    </div>
+    <div *ngIf="employeeForm.get('type')?.value=='BackendEngineer'">
+        <label>Node.js</label>
+        <input type="text">
+        <br>
+        <label>express.js</label>
+        <input type="text">
+        <br>
+        <label>Mongo Db</label>
+        <input type="text">
+        <br>
+
+    </div>
+    <button (click)="submit()">submit</button>
+</form>
